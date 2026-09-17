@@ -1,0 +1,11 @@
+{
+  "deployed": false,
+  "public": false,
+  "projectId": "appgprj_6aab3424ab54819180f15e0a046412d2",
+  "versionId": "appgprj_6aab3424ab54819180f15e0a046412d2~appgver_3d4ad6f8d58881918a6bc3c6032a7a8d",
+  "deploymentId": "appgdep_6aab4b32d2b08191b64197de557b6afb",
+  "status": "failed",
+  "error": "Timed out waiting for the TLS certificate for conecta-voluntario-welielton.welielton-silva01.chatgpt.site",
+  "updatedAt": "2026-09-17T02:11:47.537858+00:00",
+  "access": "private; awaiting explicit user audience choice"
+}

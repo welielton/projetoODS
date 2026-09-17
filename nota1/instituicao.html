@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Perfil da Instituição: Instituto Saber & Futuro. Conheça a missão, galeria de projetos sociais, depoimentos e vagas abertas no Conecta Voluntário.">
+  <title>Instituto Saber & Futuro | Perfil da Instituição</title>
+  
+  <!-- Bootstrap 5.3 CSS & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Google Fonts (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Estilos Customizados -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Link de Acessibilidade -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- Barra Superior de Acessibilidade -->
+  <aside class="bg-dark text-white py-1 small border-bottom border-secondary" aria-label="Barra de Acessibilidade">
+    <div class="container d-flex justify-content-between align-items-center">
+      <span class="d-none d-sm-inline"><i class="bi bi-universal-access me-1" aria-hidden="true"></i> Acessibilidade Web</span>
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <span class="me-1">Fonte:</span>
+        <button id="btnFontDecrease" class="btn btn-sm btn-outline-light py-0 px-2" aria-label="Diminuir fonte">A-</button>
+        <button id="btnFontIncrease" class="btn btn-sm btn-outline-light py-0 px-2" aria-label="Aumentar fonte">A+</button>
+        <button id="btnHighContrast" class="btn btn-sm btn-outline-light py-0 px-2 ms-2" aria-label="Alto contraste">
+          <i class="bi bi-circle-half" aria-hidden="true"></i> Contraste
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Cabeçalho e Navegação Principal -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-white sticky-top py-3 border-bottom" aria-label="Navegação Principal">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center text-primary" href="index.html">
+          <span class="brand-icon"><i class="bi bi-heart-pulse-fill" aria-hidden="true"></i></span>
+          <span>Conecta<span class="text-dark">Voluntário</span></span>
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainContent" aria-controls="navbarMainContent" aria-expanded="false" aria-label="Abrir menu de navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMainContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vagas.html">Mural de Vagas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cadastro.html">Quero Voluntariar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="instituicao.html">ONGs Parceiras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gestao.html">
+                <i class="bi bi-gear-fill text-primary me-1"></i> Painel de Gestão
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobre.html">Sobre & ODS</a>
+            </li>
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+              <a class="btn btn-outline-primary px-3 rounded-pill fw-semibold me-2 shadow-sm" href="login_cadastro.html">
+                <i class="bi bi-person-lock me-1"></i> Entrar / Cadastrar
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main id="main-content" class="pb-5 bg-light">
+    
+    <!-- Banner e Identidade da ONG -->
+    <div class="container pt-4">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Início</a></li>
+          <li class="breadcrumb-item"><a href="instituicao.html">Instituições Parceiras</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Instituto Saber & Futuro</li>
+        </ol>
+      </nav>
+
+      <!-- Banner de Cabeçalho da ONG -->
+      <section class="ngo-banner d-flex align-items-end p-4 text-white shadow-sm" aria-label="Capa da Instituição">
+        <div class="d-none d-md-block position-absolute top-0 end-0 p-4 opacity-25">
+          <i class="bi bi-mortarboard-fill" style="font-size: 8rem;" aria-hidden="true"></i>
+        </div>
+        <div>
+          <span class="badge bg-warning text-dark fw-bold mb-2">Organização Verificada <i class="bi bi-patch-check-fill"></i></span>
+          <h1 class="h2 fw-bold text-white mb-0">Instituto Saber & Futuro</h1>
+          <p class="text-white-50 small mb-0"><i class="bi bi-geo-alt-fill me-1"></i> Campinas - SP & Atuação Nacional Remota • Fundado em 2018</p>
+        </div>
+      </section>
+
+      <!-- Perfil / Barra de Ações Rápidas -->
+      <div class="bg-white p-4 rounded-bottom-4 shadow-sm border mb-4">
+        <div class="row align-items-center gy-3">
+          <div class="col-md-7">
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge" style="background-color: var(--ods-4);"><i class="bi bi-book me-1"></i> ODS 4: Educação</span>
+              <span class="badge" style="background-color: var(--ods-10);"><i class="bi bi-people me-1"></i> ODS 10: Inclusão Social</span>
+              <span class="badge" style="background-color: var(--ods-17);"><i class="bi bi-link-45deg me-1"></i> ODS 17: Parcerias</span>
+            </div>
+          </div>
+          <div class="col-md-5 text-md-end">
+            <a href="#vagasAbertas" class="btn btn-primary rounded-pill px-4 me-2">
+              <i class="bi bi-briefcase me-1" aria-hidden="true"></i> Ver Vagas Abertas (2)
+            </a>
+            <a href="#contatoOng" class="btn btn-outline-secondary rounded-pill px-3">
+              <i class="bi bi-envelope me-1" aria-hidden="true"></i> Contatar ONG
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conteúdo em Duas Colunas: Missão e Métricas -->
+    <div class="container">
+      <div class="row g-4">
+        
+        <!-- Coluna Esquerda: Sobre a Instituição, Galeria e Depoimentos -->
+        <div class="col-lg-8">
+          
+          <!-- Missão, Visão e Valores -->
+          <article class="bg-white p-4 p-md-5 rounded-4 border shadow-sm mb-4">
+            <h2 class="h4 fw-bold text-dark border-bottom pb-2 mb-3">
+              <i class="bi bi-flag-fill text-primary me-2" aria-hidden="true"></i>Nossa Missão e Propósito
+            </h2>
+            <p class="text-muted leading-relaxed mb-4">
+              O <strong>Instituto Saber & Futuro</strong> é uma organização sem fins lucrativos dedicada a democratizar o acesso à educação de qualidade e à tecnologia para crianças e jovens em situação de vulnerabilidade social. Acreditamos que a educação inclusiva é a ferramenta mais poderosa para romper ciclos de desigualdade e abrir portas para o mercado de trabalho.
+            </p>
+
+            <div class="row g-3">
+              <div class="col-md-4">
+                <div class="p-3 bg-light rounded-3 border h-100">
+                  <h3 class="h6 fw-bold text-primary mb-1"><i class="bi bi-bullseye me-1"></i> Missão</h3>
+                  <p class="small text-muted mb-0">Oferecer reforço escolar e capacitação digital gratuita para jovens da rede pública.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 bg-light rounded-3 border h-100">
+                  <h3 class="h6 fw-bold text-success mb-1"><i class="bi bi-eye-fill me-1"></i> Visão</h3>
+                  <p class="small text-muted mb-0">Ser referência nacional na articulação de voluntários para apoio educacional até 2030.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 bg-light rounded-3 border h-100">
+                  <h3 class="h6 fw-bold text-danger mb-1"><i class="bi bi-heart-fill me-1"></i> Valores</h3>
+                  <p class="small text-muted mb-0">Empatia, transparência, equidade social, inovação e colaboração comunitária.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Galeria de Fotos Acessível -->
+          <section class="bg-white p-4 p-md-5 rounded-4 border shadow-sm mb-4" aria-labelledby="gallery-title">
+            <h2 id="gallery-title" class="h4 fw-bold text-dark border-bottom pb-2 mb-4">
+              <i class="bi bi-images text-primary me-2" aria-hidden="true"></i>Galeria de Ações e Projetos Sociais
+            </h2>
+            <p class="text-muted small mb-4">
+              Confira os registros de nossas oficinas de reforço escolar, encontros comunitários e laboratórios digitais apoiados por voluntários.
+            </p>
+
+            <div class="row g-4">
+              <!-- Foto 1: Reforço Escolar -->
+              <div class="col-md-6">
+                <figure class="gallery-card m-0">
+                  <svg class="bd-placeholder-img w-100" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustração de oficina presencial de reforço escolar e alfabetização" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#1e3a8a"></rect>
+                    <circle cx="50%" cy="40%" r="35" fill="#3b82f6" opacity="0.5"></circle>
+                    <text x="50%" y="45%" fill="#ffffff" font-size="36" text-anchor="middle">📚</text>
+                    <text x="50%" y="75%" fill="#e2e8f0" font-size="16" font-family="sans-serif" font-weight="bold" text-anchor="middle">Oficinas de Alfabetização e Leitura</text>
+                  </svg>
+                  <figcaption>
+                    <i class="bi bi-camera me-1"></i> Turma de 4º e 5º ano em aula prática de leitura com apoio de universitários voluntários.
+                  </figcaption>
+                </figure>
+              </div>
+
+              <!-- Foto 2: Laboratório Digital -->
+              <div class="col-md-6">
+                <figure class="gallery-card m-0">
+                  <svg class="bd-placeholder-img w-100" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustração de laboratório de tecnologia e inclusão digital" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#065f46"></rect>
+                    <circle cx="50%" cy="40%" r="35" fill="#10b981" opacity="0.5"></circle>
+                    <text x="50%" y="45%" fill="#ffffff" font-size="36" text-anchor="middle">💻</text>
+                    <text x="50%" y="75%" fill="#e2e8f0" font-size="16" font-family="sans-serif" font-weight="bold" text-anchor="middle">Laboratório de Inclusão Digital</text>
+                  </svg>
+                  <figcaption>
+                    <i class="bi bi-camera me-1"></i> Jovens aprendendo noções básicas de programação e navegação segura na internet.
+                  </figcaption>
+                </figure>
+              </div>
+
+              <!-- Foto 3: Entrega de Material Didático -->
+              <div class="col-md-6">
+                <figure class="gallery-card m-0">
+                  <svg class="bd-placeholder-img w-100" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustração de doação de kits de livros e cadernos" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#7c2d12"></rect>
+                    <circle cx="50%" cy="40%" r="35" fill="#f97316" opacity="0.5"></circle>
+                    <text x="50%" y="45%" fill="#ffffff" font-size="36" text-anchor="middle">🎒</text>
+                    <text x="50%" y="75%" fill="#e2e8f0" font-size="16" font-family="sans-serif" font-weight="bold" text-anchor="middle">Campanha Volta às Aulas</text>
+                  </svg>
+                  <figcaption>
+                    <i class="bi bi-camera me-1"></i> Distribuição de kits escolares arrecadados com o auxílio de voluntários de comunicação.
+                  </figcaption>
+                </figure>
+              </div>
+
+              <!-- Foto 4: Encontro Comunitário -->
+              <div class="col-md-6">
+                <figure class="gallery-card m-0">
+                  <svg class="bd-placeholder-img w-100" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustração de roda de conversa com famílias e voluntários" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#4c1d95"></rect>
+                    <circle cx="50%" cy="40%" r="35" fill="#8b5cf6" opacity="0.5"></circle>
+                    <text x="50%" y="45%" fill="#ffffff" font-size="36" text-anchor="middle">🤝</text>
+                    <text x="50%" y="75%" fill="#e2e8f0" font-size="16" font-family="sans-serif" font-weight="bold" text-anchor="middle">Encontro Comunitário de Famílias</text>
+                  </svg>
+                  <figcaption>
+                    <i class="bi bi-camera me-1"></i> Encontro de acolhimento e escuta ativa com pais e responsáveis dos alunos atendidos.
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+
+          <!-- Vagas Abertas pela Instituição -->
+          <section id="vagasAbertas" class="bg-white p-4 p-md-5 rounded-4 border shadow-sm mb-4" aria-labelledby="open-jobs-title">
+            <h2 id="open-jobs-title" class="h4 fw-bold text-dark border-bottom pb-2 mb-3">
+              <i class="bi bi-briefcase-fill text-primary me-2" aria-hidden="true"></i>Vagas Abertas Nesta Instituição
+            </h2>
+            
+            <div class="row g-3">
+              <div class="col-md-12">
+                <article class="p-3 border rounded-3 bg-light d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+                  <div>
+                    <span class="badge job-badge-remoto mb-1">Remoto</span>
+                    <span class="badge" style="background-color: var(--ods-4);">ODS 4</span>
+                    <h3 class="h6 fw-bold text-dark mb-1">Professor(a) de Reforço de Matemática</h3>
+                    <p class="small text-muted mb-0">2 horas semanais • Aulas online para turmas do 9º ano.</p>
+                  </div>
+                  <a href="vagas.html" class="btn btn-sm btn-primary rounded-pill px-4 text-nowrap">
+                    Candidatar-se
+                  </a>
+                </article>
+              </div>
+
+              <div class="col-md-12">
+                <article class="p-3 border rounded-3 bg-light d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+                  <div>
+                    <span class="badge job-badge-hibrido mb-1">Híbrido</span>
+                    <span class="badge" style="background-color: var(--ods-4);">ODS 4</span>
+                    <h3 class="h6 fw-bold text-dark mb-1">Orientador(a) Pedagógico de Alfabetização</h3>
+                    <p class="small text-muted mb-0">3 horas semanais • Planejamento e suporte pedagógico para EJA.</p>
+                  </div>
+                  <a href="vagas.html" class="btn btn-sm btn-primary rounded-pill px-4 text-nowrap">
+                    Candidatar-se
+                  </a>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <!-- Depoimentos Específicos da ONG -->
+          <section class="bg-white p-4 p-md-5 rounded-4 border shadow-sm" aria-labelledby="ngo-testimonials-title">
+            <h2 id="ngo-testimonials-title" class="h4 fw-bold text-dark border-bottom pb-2 mb-4">
+              <i class="bi bi-chat-quote-fill text-primary me-2" aria-hidden="true"></i>Depoimentos de Quem Atua Conosco
+            </h2>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="p-3 bg-light rounded-3 border h-100">
+                  <p class="small text-muted fst-italic mb-3">
+                    "Fazer parte do time de professores voluntários do Instituto Saber & Futuro me ensinou muito mais do que imaginei. O carinho das crianças é impagável!"
+                  </p>
+                  <div class="d-flex align-items-center">
+                    <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-2 fw-bold" style="width: 38px; height: 38px; font-size: 0.85rem;">
+                      GS
+                    </div>
+                    <div>
+                      <strong class="d-block small text-dark">Gabriel Souza</strong>
+                      <span class="text-muted" style="font-size: 0.75rem;">Voluntário de Matemática há 1 ano</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="p-3 bg-light rounded-3 border h-100">
+                  <p class="small text-muted fst-italic mb-3">
+                    "A flexibilidade do voluntariado remoto facilitou conciliar a faculdade de Letras com o projeto. Uma experiência enriquecedora."
+                  </p>
+                  <div class="d-flex align-items-center">
+                    <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center me-2 fw-bold" style="width: 38px; height: 38px; font-size: 0.85rem;">
+                      CL
+                    </div>
+                    <div>
+                      <strong class="d-block small text-dark">Camila Lima</strong>
+                      <span class="text-muted" style="font-size: 0.75rem;">Voluntária de Redação há 6 meses</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Coluna Direita: Métricas, Contatos e Formulário de Apoio -->
+        <div class="col-lg-4">
+          
+          <!-- Métricas de Impacto da ONG -->
+          <aside class="bg-white p-4 rounded-4 border shadow-sm mb-4" aria-label="Métricas da Instituição">
+            <h2 class="h5 fw-bold text-dark mb-3"><i class="bi bi-graph-up text-primary me-2"></i>Impacto Acumulado</h2>
+            
+            <ul class="list-group list-group-flush small">
+              <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                <span class="text-muted"><i class="bi bi-mortarboard text-danger me-2"></i>Alunos Atendidos:</span>
+                <strong class="text-dark fs-6">+340 jovens</strong>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                <span class="text-muted"><i class="bi bi-person-check text-success me-2"></i>Voluntários Ativos:</span>
+                <strong class="text-dark fs-6">28 voluntários</strong>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                <span class="text-muted"><i class="bi bi-award text-warning me-2"></i>Aprovações em Vestibulares:</span>
+                <strong class="text-dark fs-6">47 estudantes</strong>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                <span class="text-muted"><i class="bi bi-calendar-event text-primary me-2"></i>Horas de Oficinas:</span>
+                <strong class="text-dark fs-6">+820 horas</strong>
+              </li>
+            </ul>
+          </aside>
+
+          <!-- Informações de Contato -->
+          <aside class="bg-white p-4 rounded-4 border shadow-sm mb-4" aria-label="Dados de Contato da Instituição">
+            <h2 class="h5 fw-bold text-dark mb-3"><i class="bi bi-telephone text-primary me-2"></i>Dados Institucionais</h2>
+            <ul class="list-unstyled small text-muted mb-0">
+              <li class="mb-2"><i class="bi bi-card-text me-2 text-primary"></i><strong>CNPJ:</strong> 28.123.456/0001-90</li>
+              <li class="mb-2"><i class="bi bi-geo-alt me-2 text-danger"></i><strong>Endereço:</strong> Rua das Acácias, 450 - Campinas/SP</li>
+              <li class="mb-2"><i class="bi bi-envelope me-2 text-success"></i><strong>E-mail:</strong> contato@institutosaber.org.br</li>
+              <li class="mb-2"><i class="bi bi-globe me-2 text-info"></i><strong>Site:</strong> www.institutosaber.org.br</li>
+            </ul>
+          </aside>
+
+          <!-- Formulário Rápido de Contato com a ONG -->
+          <section id="contatoOng" class="bg-white p-4 rounded-4 border shadow-sm" aria-labelledby="contact-ong-title">
+            <h2 id="contact-ong-title" class="h5 fw-bold text-dark mb-3">
+              <i class="bi bi-chat-dots text-primary me-2"></i>Fale com o Instituto
+            </h2>
+            <form novalidate>
+              <div class="mb-3">
+                <label for="ongMsgNome" class="form-label small fw-semibold">Seu Nome</label>
+                <input type="text" class="form-control form-control-sm" id="ongMsgNome" placeholder="Seu nome completo" required>
+              </div>
+              <div class="mb-3">
+                <label for="ongMsgEmail" class="form-label small fw-semibold">Seu E-mail</label>
+                <input type="email" class="form-control form-control-sm" id="ongMsgEmail" placeholder="seu@email.com" required>
+              </div>
+              <div class="mb-3">
+                <label for="ongMsgTexto" class="form-label small fw-semibold">Mensagem</label>
+                <textarea class="form-control form-control-sm" id="ongMsgTexto" rows="3" placeholder="Gostaria de apoiar a instituição ou tirar dúvidas..." required></textarea>
+              </div>
+              <button type="button" class="btn btn-primary btn-sm w-100 rounded-pill" onclick="alert('Mensagem enviada para a coordenação do Instituto Saber & Futuro!')">
+                <i class="bi bi-send me-1"></i> Enviar Mensagem
+              </button>
+            </form>
+          </section>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Rodapé Semântico -->
+  <footer class="footer-main" aria-label="Rodapé do Site">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="d-flex align-items-center mb-3">
+            <span class="brand-icon"><i class="bi bi-heart-pulse-fill" aria-hidden="true"></i></span>
+            <span class="h5 fw-bold text-white mb-0">Conecta Voluntário</span>
+          </div>
+          <p class="small text-secondary mb-3">
+            Banco de Talentos para Causas Sociais. Conectando pessoas e suas habilidades a ONGs que transformam realidades.
+          </p>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h3 class="footer-title">Navegação</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="vagas.html">Mural de Vagas</a></li>
+            <li><a href="cadastro.html">Inscrição</a></li>
+            <li><a href="instituicao.html">Perfil da ONG</a></li>
+            <li><a href="sobre.html">Sobre & ODS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-3">
+          <h3 class="footer-title">ODS Integrados</h3>
+          <ul class="footer-links">
+            <li><a href="sobre.html#ods4"><span class="badge me-1" style="background-color: var(--ods-4);">4</span> Educação de Qualidade</a></li>
+            <li><a href="sobre.html#ods10"><span class="badge me-1" style="background-color: var(--ods-10);">10</span> Redução Desigualdades</a></li>
+            <li><a href="sobre.html#ods17"><span class="badge me-1" style="background-color: var(--ods-17);">17</span> Parcerias e Meios</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <h3 class="footer-title">Desenvolvimento</h3>
+          <p class="small text-secondary mb-0">
+            Disciplina de Desenvolvimento Web - Atividade Avaliativa Nota 1.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center text-secondary">
+        <p class="mb-2 mb-md-0">&copy; 2026 Conecta Voluntário. Licença Educacional.</p>
+        <p class="mb-0 small">Em conformidade com WCAG AA.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5.3 Bundle JS via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <!-- Script Customizado -->
+  <script src="js/main.js"></script>
+</body>
+</html>

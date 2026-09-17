@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mural de Vagas de Voluntariado - Conecta Voluntário. Encontre oportunidades em reforço escolar, assistência social, tecnologia e mais.">
+  <title>Mural de Vagas | Conecta Voluntário</title>
+  
+  <!-- Bootstrap 5.3 CSS & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Google Fonts (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Estilos Customizados -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Link de Acessibilidade -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- Barra Superior de Acessibilidade -->
+  <aside class="bg-dark text-white py-1 small border-bottom border-secondary" aria-label="Barra de Acessibilidade">
+    <div class="container d-flex justify-content-between align-items-center">
+      <span class="d-none d-sm-inline"><i class="bi bi-universal-access me-1" aria-hidden="true"></i> Acessibilidade Web</span>
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <span class="me-1">Fonte:</span>
+        <button id="btnFontDecrease" class="btn btn-sm btn-outline-light py-0 px-2" aria-label="Diminuir fonte">A-</button>
+        <button id="btnFontIncrease" class="btn btn-sm btn-outline-light py-0 px-2" aria-label="Aumentar fonte">A+</button>
+        <button id="btnHighContrast" class="btn btn-sm btn-outline-light py-0 px-2 ms-2" aria-label="Alto contraste">
+          <i class="bi bi-circle-half" aria-hidden="true"></i> Contraste
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Cabeçalho e Navegação Principal -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-white sticky-top py-3 border-bottom" aria-label="Navegação Principal">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center text-primary" href="index.html">
+          <span class="brand-icon"><i class="bi bi-heart-pulse-fill" aria-hidden="true"></i></span>
+          <span>Conecta<span class="text-dark">Voluntário</span></span>
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainContent" aria-controls="navbarMainContent" aria-expanded="false" aria-label="Abrir menu de navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMainContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="vagas.html">Mural de Vagas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cadastro.html">Quero Voluntariar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="instituicao.html">ONGs Parceiras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gestao.html">
+                <i class="bi bi-gear-fill text-primary me-1"></i> Painel de Gestão
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobre.html">Sobre & ODS</a>
+            </li>
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+              <a class="btn btn-outline-primary px-3 rounded-pill fw-semibold me-2 shadow-sm" href="login_cadastro.html">
+                <i class="bi bi-person-lock me-1"></i> Entrar / Cadastrar
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main id="main-content" class="py-5 bg-light">
+    <div class="container">
+      
+      <!-- Cabeçalho da Página -->
+      <section class="mb-4">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Início</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Mural de Vagas</li>
+          </ol>
+        </nav>
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+          <div>
+            <h1 class="h2 fw-bold text-dark mb-1">Mural de Vagas Sociais</h1>
+            <p class="text-muted mb-0">Encontre a oportunidade certa para aplicar seus talentos e transformar vidas.</p>
+          </div>
+          <span id="jobsCountBadge" class="badge bg-primary fs-6 px-3 py-2 rounded-pill align-self-start align-self-md-center">
+            6 vagas disponíveis
+          </span>
+        </div>
+      </section>
+
+      <!-- Barra de Busca Rápida -->
+      <section class="mb-4" aria-label="Busca de Vagas">
+        <div class="bg-white p-3 rounded-4 shadow-sm border">
+          <div class="row g-2 align-items-center">
+            <div class="col-md-9">
+              <div class="input-group">
+                <span class="input-group-text bg-transparent border-end-0 text-muted" id="search-addon">
+                  <i class="bi bi-search" aria-hidden="true"></i>
+                </span>
+                <input type="text" id="searchJobInput" class="form-control border-start-0 ps-0" placeholder="Buscar por cargo, habilidade, ODS ou nome da ONG (ex: matemática, design, ODS 4)..." aria-label="Buscar vagas por cargo ou competência" aria-describedby="search-addon">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <button class="btn btn-outline-secondary w-100" id="resetFiltersBtn">
+                <i class="bi bi-arrow-counterclockwise me-1" aria-hidden="true"></i> Limpar Filtros
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Grade Principal: Filtros Laterais + Lista de Vagas -->
+      <div class="row g-4">
+        
+        <!-- Sidebar de Filtros -->
+        <aside class="col-lg-3" aria-label="Filtros de pesquisa">
+          <div class="filter-sidebar">
+            <h2 class="filter-title d-flex justify-content-between align-items-center">
+              <span><i class="bi bi-funnel me-2 text-primary" aria-hidden="true"></i>Filtros</span>
+            </h2>
+
+            <!-- Filtro por Área de Atuação -->
+            <fieldset class="mb-4">
+              <legend class="h6 fw-bold text-dark mb-3">Área de Atuação</legend>
+              
+              <div class="form-check mb-2">
+                <input class="form-check-input filter-area-checkbox" type="checkbox" value="educacao" id="areaEdu">
+                <label class="form-check-label small" for="areaEdu">
+                  Educação e Reforço (ODS 4)
+                </label>
+              </div>
+
+              <div class="form-check mb-2">
+                <input class="form-check-input filter-area-checkbox" type="checkbox" value="social" id="areaSocial">
+                <label class="form-check-label small" for="areaSocial">
+                  Assistência Social (ODS 10)
+                </label>
+              </div>
+
+              <div class="form-check mb-2">
+                <input class="form-check-input filter-area-checkbox" type="checkbox" value="tecnologia" id="areaTech">
+                <label class="form-check-label small" for="areaTech">
+                  Tecnologia e Inclusão Digital
+                </label>
+              </div>
+
+              <div class="form-check mb-2">
+                <input class="form-check-input filter-area-checkbox" type="checkbox" value="comunicacao" id="areaCom">
+                <label class="form-check-label small" for="areaCom">
+                  Design e Comunicação (ODS 17)
+                </label>
+              </div>
+
+              <div class="form-check mb-2">
+                <input class="form-check-input filter-area-checkbox" type="checkbox" value="saude" id="areaSaude">
+                <label class="form-check-label small" for="areaSaude">
+                  Apoio Psicossocial e Saúde
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Filtro por Modalidade -->
+            <fieldset class="mb-4">
+              <legend class="h6 fw-bold text-dark mb-3">Modalidade</legend>
+              
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="modalidadeFilter" id="modTodas" value="todas" checked>
+                <label class="form-check-label small" for="modTodas">
+                  Todas as modalidades
+                </label>
+              </div>
+
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="modalidadeFilter" id="modRemoto" value="remoto">
+                <label class="form-check-label small" for="modRemoto">
+                  100% Remoto (Online)
+                </label>
+              </div>
+
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="modalidadeFilter" id="modPresencial" value="presencial">
+                <label class="form-check-label small" for="modPresencial">
+                  Presencial
+                </label>
+              </div>
+
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="modalidadeFilter" id="modHibrido" value="hibrido">
+                <label class="form-check-label small" for="modHibrido">
+                  Híbrido
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Card Informativo sobre Validação de Horas -->
+            <div class="p-3 bg-primary-subtle rounded-3 text-primary-emphasis small">
+              <i class="bi bi-patch-check-fill me-1" aria-hidden="true"></i>
+              <strong>Horas Complementares:</strong> Todas as vagas emitem declaração formal de voluntariado válida para universidades.
+            </div>
+
+          </div>
+        </aside>
+
+        <!-- Lista de Vagas -->
+        <section class="col-lg-9" aria-label="Lista de Oportunidades">
+          
+          <div class="row g-4" id="jobsGridContainer">
+            
+            <!-- Vaga 1 -->
+            <div class="col-md-6 job-item-col">
+              <article class="job-card" data-title="Professor(a) de Reforço de Matemática" data-area="educacao" data-modality="remoto" data-ngo="Instituto Saber & Futuro">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <span class="badge job-badge-remoto"><i class="bi bi-laptop me-1" aria-hidden="true"></i> Remoto</span>
+                  <span class="badge" style="background-color: var(--ods-4);">ODS 4: Educação</span>
+                </div>
+                <h3 class="h5 fw-bold text-dark mb-1">Professor(a) de Reforço de Matemática</h3>
+                <p class="text-muted small mb-2">
+                  <i class="bi bi-building me-1 text-primary" aria-hidden="true"></i> Instituto Saber & Futuro
+                </p>
+                <p class="small text-secondary flex-grow-1">
+                  Aulas online semanais de reforço para jovens do 9º ano da rede pública em preparação para vestibulares e cursos técnicos.
+                </p>
+                <div class="mb-3">
+                  <span class="job-skill-tag">Matemática</span>
+                  <span class="job-skill-tag">Didática</span>
+                  <span class="job-skill-tag">2h/semana</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
+                  <span class="text-muted small"><i class="bi bi-geo-alt me-1" aria-hidden="true"></i> Brasil (Online)</span>
+                  <button class="btn btn-sm btn-primary rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#jobDetailsModal" 
+                    data-job-title="Professor(a) de Reforço de Matemática"
+                    data-job-ngo="Instituto Saber & Futuro"
+                    data-job-location="100% Remoto (Google Meet)"
+                    data-job-ods="ODS 4: Educação de Qualidade"
+                    data-job-hours="2 horas semanais (flexíveis)"
+                    data-job-desc="Procuramos voluntários com boa didática para ministrar aulas de matemática básica (álgebra, geometria e raciocínio lógico) para turmas pequenas de até 5 jovens de comunidades de baixa renda.">
+                    Candidatar-se
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <!-- Vaga 2 -->
+            <div class="col-md-6 job-item-col">
+              <article class="job-card" data-title="Designer Gráfico para Campanhas Sociais" data-area="comunicacao" data-modality="remoto" data-ngo="Coletivo Vozes da Periferia">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <span class="badge job-badge-remoto"><i class="bi bi-laptop me-1" aria-hidden="true"></i> Remoto</span>
+                  <span class="badge" style="background-color: var(--ods-17);">ODS 17: Parcerias</span>
+                </div>
+                <h3 class="h5 fw-bold text-dark mb-1">Designer Gráfico para Campanhas Sociais</h3>
+                <p class="text-muted small mb-2">
+                  <i class="bi bi-building me-1 text-primary" aria-hidden="true"></i> Coletivo Vozes da Periferia
+                </p>
+                <p class="small text-secondary flex-grow-1">
+                  Criação de peças visuais e identidade para campanhas de arrecadação de agasalhos e cestas básicas nas redes sociais.
+                </p>
+                <div class="mb-3">
+                  <span class="job-skill-tag">Canva / Figma</span>
+                  <span class="job-skill-tag">Redes Sociais</span>
+                  <span class="job-skill-tag">3h/semana</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
+                  <span class="text-muted small"><i class="bi bi-geo-alt me-1" aria-hidden="true"></i> Brasil (Online)</span>
+                  <button class="btn btn-sm btn-primary rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#jobDetailsModal"
+                    data-job-title="Designer Gráfico para Campanhas Sociais"
+                    data-job-ngo="Coletivo Vozes da Periferia"
+                    data-job-location="100% Remoto"
+                    data-job-ods="ODS 17: Parcerias e Meios de Implementação"
+                    data-job-hours="3 horas semanais"
+                    data-job-desc="Ajude o coletivo a estruturar publicações atrativas para Instagram e materiais impressos simples que divulgam nossas campanhas humanitárias de arrecadação de alimentos.">
+                    Candidatar-se
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <!-- Vaga 3 -->
+            <div class="col-md-6 job-item-col">
+              <article class="job-card" data-title="Instrutor de Inclusão Digital e Informática" data-area="tecnologia" data-modality="presencial" data-ngo="Associação Mãos Que Acolhem">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <span class="badge job-badge-presencial"><i class="bi bi-geo-alt me-1" aria-hidden="true"></i> Presencial</span>
+                  <span class="badge" style="background-color: var(--ods-10);">ODS 10: Desigualdades</span>
+                </div>
+                <h3 class="h5 fw-bold text-dark mb-1">Instrutor de Inclusão Digital e Informática</h3>
+                <p class="text-muted small mb-2">
+                  <i class="bi bi-building me-1 text-primary" aria-hidden="true"></i> Associação Mãos Que Acolhem
+                </p>
+                <p class="small text-secondary flex-grow-1">
+                  Ensino de informática básica (digitação, navegação segura, elaboração de currículos) para jovens e idosos da comunidade.
+                </p>
+                <div class="mb-3">
+                  <span class="job-skill-tag">Informática</span>
+                  <span class="job-skill-tag">Empatia</span>
+                  <span class="job-skill-tag">4h/sábado</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
+                  <span class="text-muted small"><i class="bi bi-geo-alt me-1" aria-hidden="true"></i> São Paulo - SP</span>
+                  <button class="btn btn-sm btn-primary rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#jobDetailsModal"
+                    data-job-title="Instrutor de Inclusão Digital e Informática"
+                    data-job-ngo="Associação Mãos Que Acolhem"
+                    data-job-location="Presencial - Zona Leste, São Paulo/SP"
+                    data-job-ods="ODS 10: Redução das Desigualdades"
+                    data-job-hours="4 horas aos sábados (manhã)"
+                    data-job-desc="Atuação presencial em nosso laboratório comunitário ensinando ferramentas do cotidiano digital para inclusão de pessoas que nunca tiveram acesso prévio ao computador.">
+                    Candidatar-se
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <!-- Vaga 4 -->
+            <div class="col-md-6 job-item-col">
+              <article class="job-card" data-title="Desenvolvedor(a) Web Front-end Voluntário" data-area="tecnologia" data-modality="remoto" data-ngo="Rede Solidária Brasil">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <span class="badge job-badge-remoto"><i class="bi bi-laptop me-1" aria-hidden="true"></i> Remoto</span>
+                  <span class="badge" style="background-color: var(--ods-17);">ODS 17: Parcerias</span>
+                </div>
+                <h3 class="h5 fw-bold text-dark mb-1">Desenvolvedor(a) Web Front-end Voluntário</h3>
+                <p class="text-muted small mb-2">
+                  <i class="bi bi-building me-1 text-primary" aria-hidden="true"></i> Rede Solidária Brasil
+                </p>
+                <p class="small text-secondary flex-grow-1">
+                  Auxílio na manutenção e aprimoramento do portal de transparência e captação de recursos da ONG com HTML, CSS e JavaScript.
+                </p>
+                <div class="mb-3">
+                  <span class="job-skill-tag">HTML / CSS</span>
+                  <span class="job-skill-tag">Bootstrap</span>
+                  <span class="job-skill-tag">4h/semana</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
+                  <span class="text-muted small"><i class="bi bi-geo-alt me-1" aria-hidden="true"></i> Brasil (Online)</span>
+                  <button class="btn btn-sm btn-primary rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#jobDetailsModal"
+                    data-job-title="Desenvolvedor(a) Web Front-end Voluntário"
+                    data-job-ngo="Rede Solidária Brasil"
+                    data-job-location="100% Remoto"
+                    data-job-ods="ODS 17: Parcerias e Meios de Implementação"
+                    data-job-hours="4 horas semanais"
+                    data-job-desc="Trabalhe com o time técnico da ONG implementando melhorias de usabilidade, acessibilidade e novas páginas de doação em nosso site institucional.">
+                    Candidatar-se
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <!-- Vaga 5 -->
+            <div class="col-md-6 job-item-col">
+              <article class="job-card" data-title="Orientador(a) Pedagógico de Alfabetização" data-area="educacao" data-modality="hibrido" data-ngo="Instituto Saber & Futuro">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <span class="badge job-badge-hibrido"><i class="bi bi-shuffle me-1" aria-hidden="true"></i> Híbrido</span>
+                  <span class="badge" style="background-color: var(--ods-4);">ODS 4: Educação</span>
+                </div>
+                <h3 class="h5 fw-bold text-dark mb-1">Orientador(a) Pedagógico de Alfabetização</h3>
+                <p class="text-muted small mb-2">
+                  <i class="bi bi-building me-1 text-primary" aria-hidden="true"></i> Instituto Saber & Futuro
+                </p>
+                <p class="small text-secondary flex-grow-1">
+                  Planejamento de atividades lúdicas e materiais de apoio para alfabetização de jovens e adultos (EJA).
+                </p>
+                <div class="mb-3">
+                  <span class="job-skill-tag">Pedagogia / Letras</span>
+                  <span class="job-skill-tag">EJA</span>
+                  <span class="job-skill-tag">3h/semana</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
+                  <span class="text-muted small"><i class="bi bi-geo-alt me-1" aria-hidden="true"></i> Campinas - SP</span>
+                  <button class="btn btn-sm btn-primary rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#jobDetailsModal"
+                    data-job-title="Orientador(a) Pedagógico de Alfabetização"
+                    data-job-ngo="Instituto Saber & Futuro"
+                    data-job-location="Híbrido (Campinas/SP + Online)"
+                    data-job-ods="ODS 4: Educação de Qualidade"
+                    data-job-hours="3 horas semanais"
+                    data-job-desc="Construção de planos de aula e acompanhamento pedagógico para turmas do projeto de alfabetização de jovens e adultos da comunidade.">
+                    Candidatar-se
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <!-- Vaga 6 -->
+            <div class="col-md-6 job-item-col">
+              <article class="job-card" data-title="Apoio em Triagem Social e Atendimento" data-area="social" data-modality="presencial" data-ngo="Associação Mãos Que Acolhem">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <span class="badge job-badge-presencial"><i class="bi bi-geo-alt me-1" aria-hidden="true"></i> Presencial</span>
+                  <span class="badge" style="background-color: var(--ods-10);">ODS 10: Desigualdades</span>
+                </div>
+                <h3 class="h5 fw-bold text-dark mb-1">Apoio em Triagem Social e Atendimento</h3>
+                <p class="text-muted small mb-2">
+                  <i class="bi bi-building me-1 text-primary" aria-hidden="true"></i> Associação Mãos Que Acolhem
+                </p>
+                <p class="small text-secondary flex-grow-1">
+                  Recepção e cadastro de famílias em situação de vulnerabilidade para encaminhamento a programas de auxílio.
+                </p>
+                <div class="mb-3">
+                  <span class="job-skill-tag">Serviço Social</span>
+                  <span class="job-skill-tag">Atendimento</span>
+                  <span class="job-skill-tag">4h/semana</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
+                  <span class="text-muted small"><i class="bi bi-geo-alt me-1" aria-hidden="true"></i> São Paulo - SP</span>
+                  <button class="btn btn-sm btn-primary rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#jobDetailsModal"
+                    data-job-title="Apoio em Triagem Social e Atendimento"
+                    data-job-ngo="Associação Mãos Que Acolhem"
+                    data-job-location="Presencial - São Paulo/SP"
+                    data-job-ods="ODS 10: Redução das Desigualdades"
+                    data-job-hours="4 horas semanais"
+                    data-job-desc="Suporte no preenchimento de fichas socioeconômicas e acolhimento humanizado das famílias assistidas pelo projeto comunitário.">
+                    Candidatar-se
+                  </button>
+                </div>
+              </article>
+            </div>
+
+          </div>
+
+          <!-- Mensagem para quando nenhum resultado for encontrado -->
+          <div id="noResultsMessage" class="text-center py-5 bg-white rounded-4 border p-4" style="display: none;">
+            <i class="bi bi-search fs-1 text-muted d-block mb-3" aria-hidden="true"></i>
+            <h3 class="h5 fw-bold text-dark">Nenhuma vaga encontrada para os filtros selecionados</h3>
+            <p class="text-muted small mb-3">Tente alterar os termos de busca ou remover alguns filtros laterais.</p>
+            <a href="cadastro.html" class="btn btn-primary rounded-pill px-4">Cadastre seu talento para futuras vagas</a>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal de Detalhes da Vaga e Inscrição Rápida -->
+  <div class="modal fade" id="jobDetailsModal" tabindex="-1" aria-labelledby="modalJobTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content rounded-4 border-0 shadow-lg">
+        
+        <div class="modal-header border-bottom p-4">
+          <div>
+            <span class="badge bg-primary mb-1" id="modalJobOds">ODS Relacionado</span>
+            <h2 class="modal-title h4 fw-bold text-dark" id="modalJobTitle">Título da Oportunidade</h2>
+            <p class="text-muted small mb-0" id="modalJobNgo"><i class="bi bi-building me-1"></i> Nome da ONG</p>
+          </div>
+          <button type="button" class="btn-close align-self-start" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+
+        <div class="modal-body p-4">
+          <div id="applicationSuccessAlert" class="alert alert-success d-none mb-4" role="alert">
+            <i class="bi bi-check-circle-fill me-2"></i>
+            <strong>Candidatura enviada com sucesso!</strong> A ONG entrará em contato pelo seu e-mail cadastrado.
+          </div>
+
+          <div class="row g-3 mb-4">
+            <div class="col-sm-6">
+              <div class="p-3 bg-light rounded-3 border">
+                <span class="text-muted small d-block"><i class="bi bi-geo-alt text-danger me-1"></i> Localização / Formato:</span>
+                <strong id="modalJobLocation" class="text-dark">Remoto</strong>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="p-3 bg-light rounded-3 border">
+                <span class="text-muted small d-block"><i class="bi bi-clock text-primary me-1"></i> Carga Horária:</span>
+                <strong id="modalJobHours" class="text-dark">2h semanais</strong>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="h6 fw-bold text-dark mb-2">Descrição das Atividades:</h3>
+          <p class="text-muted" id="modalJobDesc">Detalhes da vaga...</p>
+
+          <div class="p-3 bg-primary-subtle rounded-3 text-primary-emphasis small">
+            <i class="bi bi-info-circle-fill me-1"></i>
+            Ao clicar em confirmar, seus dados de perfil e competências serão compartilhados com a organização responsável.
+          </div>
+        </div>
+
+        <div class="modal-footer border-top p-3 bg-light rounded-bottom-4">
+          <button type="button" class="btn btn-outline-secondary rounded-pill px-3" data-bs-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-primary rounded-pill px-4" id="confirmApplicationBtn">
+            <i class="bi bi-send-fill me-1"></i> Confirmar Candidatura
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé Semântico -->
+  <footer class="footer-main" aria-label="Rodapé do Site">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="d-flex align-items-center mb-3">
+            <span class="brand-icon"><i class="bi bi-heart-pulse-fill" aria-hidden="true"></i></span>
+            <span class="h5 fw-bold text-white mb-0">Conecta Voluntário</span>
+          </div>
+          <p class="small text-secondary mb-3">
+            Plataforma acadêmica e social desenvolvida para conectar talentos e habilidades a organizações da sociedade civil em prol dos ODS.
+          </p>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h3 class="footer-title">Navegação</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="vagas.html">Mural de Vagas</a></li>
+            <li><a href="cadastro.html">Inscrição de Voluntários</a></li>
+            <li><a href="instituicao.html">Perfil da ONG Modelo</a></li>
+            <li><a href="sobre.html">Sobre & ODS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-3">
+          <h3 class="footer-title">ODS Integrados</h3>
+          <ul class="footer-links">
+            <li><a href="sobre.html#ods4"><span class="badge me-1" style="background-color: var(--ods-4);">4</span> Educação de Qualidade</a></li>
+            <li><a href="sobre.html#ods10"><span class="badge me-1" style="background-color: var(--ods-10);">10</span> Redução Desigualdades</a></li>
+            <li><a href="sobre.html#ods17"><span class="badge me-1" style="background-color: var(--ods-17);">17</span> Parcerias e Meios</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <h3 class="footer-title">Projeto Acadêmico</h3>
+          <p class="small text-secondary mb-0">
+            Desenvolvimento Web (Nota 1). Código estruturado e acessível.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center text-secondary">
+        <p class="mb-2 mb-md-0">&copy; 2026 Conecta Voluntário. Licença Educacional.</p>
+        <p class="mb-0 small">Em conformidade com WCAG AA.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5.3 Bundle JS via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <!-- Script Customizado -->
+  <script src="js/main.js"></script>
+</body>
+</html>

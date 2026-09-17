@@ -1,0 +1,555 @@
+/* ==========================================================================
+   CONECTA VOLUNTÁRIO - ESTILOS CUSTOMIZADOS (CSS3)
+   Compatível com Bootstrap 5.3 e focado em Acessibilidade (WCAG AA)
+   ========================================================================== */
+
+:root {
+  /* Cores Principais do Projeto */
+  --cv-primary: #0d6efd;
+  --cv-primary-dark: #0a58ca;
+  --cv-primary-light: #e7f1ff;
+  --cv-secondary: #198754;
+  --cv-secondary-dark: #146c43;
+  --cv-accent: #fd7e14;
+  --cv-dark: #212529;
+  --cv-light: #f8f9fa;
+  --cv-gray-100: #f1f5f9;
+  --cv-gray-200: #e2e8f0;
+  --cv-gray-600: #64748b;
+  --cv-gray-800: #1e293b;
+
+  /* Cores Oficiais da Agenda 2030 / ODS */
+  --ods-4: #c5192d;   /* Educação de Qualidade */
+  --ods-10: #dd1367;  /* Redução das Desigualdades */
+  --ods-17: #19486a;  /* Parcerias e Meios de Implementação */
+
+  /* Tipografia e Dimensões */
+  --cv-font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --cv-transition-speed: 0.25s;
+  --cv-border-radius: 0.75rem;
+  --cv-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --cv-shadow-md: 0 6px 18px rgba(0, 0, 0, 0.08);
+  --cv-shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* ==========================================================================
+   RESET & ACESSIBILIDADE
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--cv-font-sans);
+  color: var(--cv-gray-800);
+  background-color: #fdfdfd;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Link de Salto para Leitores de Tela */
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 10px;
+  background: var(--cv-primary-dark);
+  color: #ffffff;
+  padding: 10px 16px;
+  z-index: 9999;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 10px;
+  outline: 3px solid #ffc107;
+}
+
+/* Foco Acessível em Elementos Interativos */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #0d6efd !important;
+  outline-offset: 2px !important;
+}
+
+/* ==========================================================================
+   HEADER & NAVBAR
+   ========================================================================== */
+
+.navbar-brand {
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.brand-icon {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, var(--cv-primary), var(--cv-secondary));
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-right: 8px;
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+  color: var(--cv-gray-800);
+  padding: 0.5rem 1rem !important;
+  transition: color var(--cv-transition-speed) ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--cv-primary) !important;
+  font-weight: 600;
+}
+
+.navbar .nav-link.active {
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .navbar .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 1rem;
+    right: 1rem;
+    height: 3px;
+    background-color: var(--cv-primary);
+    border-radius: 2px;
+  }
+}
+
+/* Abas Nav-Pills (Painel de Gestão e Login) */
+.nav-pills .nav-link {
+  color: var(--cv-gray-800);
+  padding: 0.6rem 1.25rem;
+  font-weight: 600;
+  transition: all var(--cv-transition-speed) ease;
+}
+
+.nav-pills .nav-link:hover {
+  color: var(--cv-primary);
+  background-color: var(--cv-gray-100);
+}
+
+.nav-pills .nav-link.active {
+  background-color: var(--cv-primary) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.25);
+}
+
+.nav-pills .nav-link.active * {
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+
+.hero-section {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e8f5e9 100%);
+  padding: 4.5rem 0 4rem;
+  border-bottom: 1px solid var(--cv-gray-200);
+}
+
+.hero-badge {
+  background-color: #ffffff;
+  color: var(--cv-primary-dark);
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-radius: 50rem;
+  box-shadow: var(--cv-shadow-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid rgba(13, 110, 253, 0.15);
+}
+
+.hero-title {
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.hero-title .text-highlight {
+  color: var(--cv-primary);
+  position: relative;
+}
+
+.hero-lead {
+  font-size: 1.2rem;
+  color: #475569;
+}
+
+.hero-stats-card {
+  background: #ffffff;
+  border-radius: var(--cv-border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--cv-shadow-md);
+  border: 1px solid var(--cv-gray-200);
+}
+
+/* ==========================================================================
+   CARDS DE ODS (OBJETIVOS DE DESENVOLVIMENTO SUSTENTÁVEL)
+   ========================================================================== */
+
+.ods-card {
+  border-radius: var(--cv-border-radius);
+  border: none;
+  transition: transform var(--cv-transition-speed) ease, box-shadow var(--cv-transition-speed) ease;
+  overflow: hidden;
+  height: 100%;
+}
+
+.ods-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--cv-shadow-lg);
+}
+
+.ods-card-header-4 {
+  background-color: var(--ods-4);
+  color: #ffffff;
+}
+
+.ods-card-header-10 {
+  background-color: var(--ods-10);
+  color: #ffffff;
+}
+
+.ods-card-header-17 {
+  background-color: var(--ods-17);
+  color: #ffffff;
+}
+
+.ods-number {
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1;
+  opacity: 0.9;
+}
+
+.ods-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   MURAL DE VAGAS & FILTROS
+   ========================================================================== */
+
+.filter-sidebar {
+  background: #ffffff;
+  border: 1px solid var(--cv-gray-200);
+  border-radius: var(--cv-border-radius);
+  padding: 1.5rem;
+  position: sticky;
+  top: 90px;
+}
+
+.filter-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--cv-gray-100);
+  margin-bottom: 1.25rem;
+}
+
+.job-card {
+  background: #ffffff;
+  border: 1px solid var(--cv-gray-200);
+  border-radius: var(--cv-border-radius);
+  padding: 1.5rem;
+  transition: all var(--cv-transition-speed) ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.job-card:hover {
+  border-color: var(--cv-primary);
+  box-shadow: var(--cv-shadow-md);
+  transform: translateY(-3px);
+}
+
+.job-badge-remoto {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  font-weight: 600;
+}
+
+.job-badge-presencial {
+  background-color: #dcfce7;
+  color: #15803d;
+  font-weight: 600;
+}
+
+.job-badge-hibrido {
+  background-color: #fef3c7;
+  color: #b45309;
+  font-weight: 600;
+}
+
+.job-skill-tag {
+  background-color: #f1f5f9;
+  color: #475569;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.25rem 0.6rem;
+  border-radius: 50rem;
+  display: inline-block;
+  margin-right: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+/* ==========================================================================
+   FORMULÁRIO DE INSCRIÇÃO POR ETAPAS (STEPPER)
+   ========================================================================== */
+
+.stepper-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.stepper-container::before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: 30px;
+  right: 30px;
+  height: 4px;
+  background-color: var(--cv-gray-200);
+  z-index: 1;
+}
+
+.stepper-progress {
+  position: absolute;
+  top: 24px;
+  left: 30px;
+  width: 0%;
+  height: 4px;
+  background-color: var(--cv-primary);
+  z-index: 2;
+  transition: width 0.4s ease;
+}
+
+.step-item {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  flex: 1;
+}
+
+.step-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 3px solid var(--cv-gray-200);
+  color: var(--cv-gray-600);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.step-item.active .step-circle {
+  background-color: var(--cv-primary);
+  border-color: var(--cv-primary);
+  color: #ffffff;
+  box-shadow: 0 0 0 5px rgba(13, 110, 253, 0.2);
+}
+
+.step-item.completed .step-circle {
+  background-color: var(--cv-secondary);
+  border-color: var(--cv-secondary);
+  color: #ffffff;
+}
+
+.step-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--cv-gray-600);
+}
+
+.step-item.active .step-label {
+  color: var(--cv-primary);
+}
+
+.form-step-section {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.form-step-section.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   PERFIL DA INSTITUIÇÃO & GALERIA
+   ========================================================================== */
+
+.ngo-banner {
+  height: 240px;
+  background: linear-gradient(135deg, #1e3a8a, #0d9488);
+  border-radius: var(--cv-border-radius);
+  position: relative;
+  overflow: hidden;
+}
+
+.ngo-avatar-container {
+  margin-top: -60px;
+  position: relative;
+  z-index: 4;
+}
+
+.ngo-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  box-shadow: var(--cv-shadow-md);
+  background-color: #ffffff;
+}
+
+.gallery-card {
+  border-radius: var(--cv-border-radius);
+  overflow: hidden;
+  box-shadow: var(--cv-shadow-sm);
+  transition: transform var(--cv-transition-speed) ease;
+}
+
+.gallery-card:hover {
+  transform: scale(1.02);
+}
+
+.gallery-card img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.gallery-card figcaption {
+  font-size: 0.85rem;
+  color: #64748b;
+  padding: 0.75rem;
+  background: #ffffff;
+  border-top: 1px solid var(--cv-gray-100);
+}
+
+/* ==========================================================================
+   DEPOIMENTOS & IMPACTO
+   ========================================================================== */
+
+.testimonial-card {
+  background: #ffffff;
+  border: 1px solid var(--cv-gray-200);
+  border-radius: var(--cv-border-radius);
+  padding: 1.75rem;
+  height: 100%;
+  position: relative;
+}
+
+.testimonial-avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.quote-icon {
+  font-size: 2rem;
+  color: #e2e8f0;
+  line-height: 1;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.footer-main {
+  background-color: #0f172a;
+  color: #94a3b8;
+  padding: 4rem 0 2rem;
+  margin-top: auto;
+}
+
+.footer-title {
+  color: #f8fafc;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color var(--cv-transition-speed) ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #334155;
+  padding-top: 1.5rem;
+  margin-top: 3rem;
+  font-size: 0.875rem;
+}
+
+/* ==========================================================================
+   PREFERÊNCIAS DO SISTEMA (ACESSIBILIDADE)
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "capturadoEm": "2026-09-17T02:12:00.815Z",
+  "respostas": [
+    {
+      "url": "https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome",
+      "status": 200,
+      "total": 27,
+      "amostra": [
+        {
+          "id": 12,
+          "sigla": "AC",
+          "nome": "Acre",
+          "regiao": {
+            "id": 1,
+            "sigla": "N",
+            "nome": "Norte"
+          }
+        },
+        {
+          "id": 27,
+          "sigla": "AL",
+          "nome": "Alagoas",
+          "regiao": {
+            "id": 2,
+            "sigla": "NE",
+            "nome": "Nordeste"
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://servicodados.ibge.gov.br/api/v1/localidades/estados/MA/municipios?orderBy=nome",
+      "status": 200,
+      "total": 217,
+      "amostra": [
+        {
+          "id": 2100055,
+          "nome": "Açailândia",
+          "microrregiao": {
+            "id": 21009,
+            "nome": "Imperatriz",
+            "mesorregiao": {
+              "id": 2102,
+              "nome": "Oeste Maranhense",
+              "UF": {
+                "id": 21,
+                "sigla": "MA",
+                "nome": "Maranhão",
+                "regiao": {
+                  "id": 2,
+                  "sigla": "NE",
+                  "nome": "Nordeste"
+                }
+              }
+            }
+          },
+          "regiao-imediata": {
+            "id": 210021,
+            "nome": "Açailândia",
+            "regiao-intermediaria": {
+              "id": 2105,
+              "nome": "Imperatriz",
+              "UF": {
+                "id": 21,
+                "sigla": "MA",
+                "nome": "Maranhão",
+                "regiao": {
+                  "id": 2,
+                  "sigla": "NE",
+                  "nome": "Nordeste"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": 2100105,
+          "nome": "Afonso Cunha",
+          "microrregiao": {
+            "id": 21016,
+            "nome": "Coelho Neto",
+            "mesorregiao": {
+              "id": 2104,
+              "nome": "Leste Maranhense",
+              "UF": {
+                "id": 21,
+                "sigla": "MA",
+                "nome": "Maranhão",
+                "regiao": {
+                  "id": 2,
+                  "sigla": "NE",
+                  "nome": "Nordeste"
+                }
+              }
+            }
+          },
+          "regiao-imediata": {
+            "id": 210013,
+            "nome": "Caxias",
+            "regiao-intermediaria": {
+              "id": 2103,
+              "nome": "Caxias",
+              "UF": {
+                "id": 21,
+                "sigla": "MA",
+                "nome": "Maranhão",
+                "regiao": {
+                  "id": 2,
+                  "sigla": "NE",
+                  "nome": "Nordeste"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

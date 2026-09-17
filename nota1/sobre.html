@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sobre o Projeto Conecta Voluntário e o alinhamento com os ODS 4, 10 e 17 da ONU. Conheça nossa missão e arquitetura acadêmica.">
+  <title>Sobre o Projeto & ODS | Conecta Voluntário</title>
+  
+  <!-- Bootstrap 5.3 CSS & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Google Fonts (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Estilos Customizados -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Link de Acessibilidade -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- Barra Superior de Acessibilidade -->
+  <aside class="bg-dark text-white py-1 small border-bottom border-secondary" aria-label="Barra de Acessibilidade">
+    <div class="container d-flex justify-content-between align-items-center">
+      <span class="d-none d-sm-inline"><i class="bi bi-universal-access me-1" aria-hidden="true"></i> Acessibilidade Web</span>
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <span class="me-1">Fonte:</span>
+        <button id="btnFontDecrease" class="btn btn-sm btn-outline-light py-0 px-2" aria-label="Diminuir fonte">A-</button>
+        <button id="btnFontIncrease" class="btn btn-sm btn-outline-light py-0 px-2" aria-label="Aumentar fonte">A+</button>
+        <button id="btnHighContrast" class="btn btn-sm btn-outline-light py-0 px-2 ms-2" aria-label="Alto contraste">
+          <i class="bi bi-circle-half" aria-hidden="true"></i> Contraste
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Cabeçalho e Navegação Principal -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-white sticky-top py-3 border-bottom" aria-label="Navegação Principal">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center text-primary" href="index.html">
+          <span class="brand-icon"><i class="bi bi-heart-pulse-fill" aria-hidden="true"></i></span>
+          <span>Conecta<span class="text-dark">Voluntário</span></span>
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainContent" aria-controls="navbarMainContent" aria-expanded="false" aria-label="Abrir menu de navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMainContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vagas.html">Mural de Vagas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cadastro.html">Quero Voluntariar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="instituicao.html">ONGs Parceiras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gestao.html">
+                <i class="bi bi-gear-fill text-primary me-1"></i> Painel de Gestão
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="sobre.html">Sobre & ODS</a>
+            </li>
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+              <a class="btn btn-outline-primary px-3 rounded-pill fw-semibold me-2 shadow-sm" href="login_cadastro.html">
+                <i class="bi bi-person-lock me-1"></i> Entrar / Cadastrar
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main id="main-content" class="py-5 bg-light">
+    <div class="container">
+      
+      <!-- Breadcrumb e Título -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Início</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Sobre o Projeto & ODS</li>
+        </ol>
+      </nav>
+
+      <section class="text-center mb-5">
+        <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-semibold mb-2">Agenda 2030 & Responsabilidade Social</span>
+        <h1 class="display-5 fw-bold text-dark mb-3">Sobre o Conecta Voluntário</h1>
+        <p class="lead text-muted max-w-700 mx-auto">
+          Um banco de talentos orientado por impacto para eliminar a barreira entre pessoas que desejam doar suas habilidades e organizações sociais que transformam realidades locais.
+        </p>
+      </section>
+
+      <!-- Seção: A Situação-Problema -->
+      <article class="bg-white p-4 p-md-5 rounded-4 border shadow-sm mb-5">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <h2 class="h3 fw-bold text-dark mb-3">
+              <i class="bi bi-exclamation-triangle-fill text-warning me-2"></i>A Situação-Problema
+            </h2>
+            <p class="text-muted leading-relaxed">
+              Milhares de estudantes universitários e profissionais qualificados desejam realizar trabalho voluntário utilizando seus conhecimentos específicos — seja ensinando matemática, desenvolvendo websites, criando identidades visuais, prestando apoio administrativo ou acolhimento psicológico.
+            </p>
+            <p class="text-muted leading-relaxed">
+              No entanto, essas pessoas enfrentam grandes barreiras de descoberta e triagem: não sabem onde encontrar ONGs confiáveis, quais demandas técnicas são prioritárias e de que maneira podem contribuir em horários flexíveis ou remotamente. Ao mesmo tempo, pequenas organizações do terceiro setor carecem de pessoal técnico especializado, o que compromete sua sustentabilidade e seu alcance comunitário.
+            </p>
+            <div class="p-3 bg-light rounded-3 border-start border-primary border-4">
+              <strong>Solução Proposta:</strong> Uma plataforma web centralizada, acessível e responsiva que atua como um <em>Banco de Talentos por Competências</em>, conectando as demandas reais das ONGs à disponibilidade dos voluntários.
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="p-4 bg-primary text-white rounded-4 shadow">
+              <h3 class="h5 fw-bold mb-3 d-flex align-items-center">
+                <i class="bi bi-bullseye me-2"></i> Nosso Propósito
+              </h3>
+              <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
+                <li><i class="bi bi-check-circle-fill text-warning me-2"></i> Facilitar o engajamento cívico e estudantil.</li>
+                <li><i class="bi bi-check-circle-fill text-warning me-2"></i> Fortalecer a capacidade técnica e operacional de ONGs.</li>
+                <li><i class="bi bi-check-circle-fill text-warning me-2"></i> Gerar certificados válidos de horas complementares.</li>
+                <li><i class="bi bi-check-circle-fill text-warning me-2"></i> Acelerar o alcance das metas da Agenda 2030 da ONU.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Detalhamento dos 3 ODS Relacionados -->
+      <section class="mb-5" aria-labelledby="ods-detailed-title">
+        <h2 id="ods-detailed-title" class="h3 fw-bold text-dark text-center mb-4">
+          Alinhamento Estratégico com os Objetivos da ONU
+        </h2>
+
+        <div class="row g-4">
+          
+          <!-- ODS 4 -->
+          <div class="col-lg-4" id="ods4">
+            <article class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+              <div class="p-4 text-white" style="background-color: var(--ods-4);">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-white text-danger fw-bold">ODS 4</span>
+                  <i class="bi bi-mortarboard-fill fs-2" aria-hidden="true"></i>
+                </div>
+                <h3 class="h4 fw-bold mb-0">Educação de Qualidade</h3>
+              </div>
+              <div class="card-body p-4 bg-white">
+                <h4 class="h6 fw-bold text-dark">Meta Central:</h4>
+                <p class="small text-muted mb-3">
+                  Garantir que todas as meninas e meninos completem o ensino primário e secundário gratuito, equitativo e de qualidade.
+                </p>
+                <h4 class="h6 fw-bold text-dark">Aplicação no Conecta Voluntário:</h4>
+                <p class="small text-muted mb-0">
+                  Mobilização de professores, pedagogos e universitários para atuarem em reforço escolar de matemática, redação, alfabetização infantil e oficinas de letramento digital.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <!-- ODS 10 -->
+          <div class="col-lg-4" id="ods10">
+            <article class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+              <div class="p-4 text-white" style="background-color: var(--ods-10);">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-white fw-bold" style="color: var(--ods-10);">ODS 10</span>
+                  <i class="bi bi-people-fill fs-2" aria-hidden="true"></i>
+                </div>
+                <h3 class="h4 fw-bold mb-0">Redução das Desigualdades</h3>
+              </div>
+              <div class="card-body p-4 bg-white">
+                <h4 class="h6 fw-bold text-dark">Meta Central:</h4>
+                <p class="small text-muted mb-3">
+                  Empoderar e promover a inclusão social, econômica e política de todos, independentemente da idade, gênero, deficiência, raça ou origem.
+                </p>
+                <h4 class="h6 fw-bold text-dark">Aplicação no Conecta Voluntário:</h4>
+                <p class="small text-muted mb-0">
+                  Direcionamento de voluntários técnicos para áreas periféricas e comunidades tradicionais, democratizando o acesso a serviços sociais, auxílio jurídico e inclusão digital.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <!-- ODS 17 -->
+          <div class="col-lg-4" id="ods17">
+            <article class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+              <div class="p-4 text-white" style="background-color: var(--ods-17);">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-white fw-bold" style="color: var(--ods-17);">ODS 17</span>
+                  <i class="bi bi-diagram-3-fill fs-2" aria-hidden="true"></i>
+                </div>
+                <h3 class="h4 fw-bold mb-0">Parcerias e Meios</h3>
+              </div>
+              <div class="card-body p-4 bg-white">
+                <h4 class="h6 fw-bold text-dark">Meta Central:</h4>
+                <p class="small text-muted mb-3">
+                  Incentivar e promover parcerias públicas, público-privadas e com a sociedade civil eficazes, a partir da experiência das estratégias de mobilização de recursos.
+                </p>
+                <h4 class="h6 fw-bold text-dark">Aplicação no Conecta Voluntário:</h4>
+                <p class="small text-muted mb-0">
+                  A própria essência da plataforma atua como ecossistema articulador entre a academia (estudantes), sociedade civil (voluntários) e terceiro setor (ONGs).
+                </p>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Roadmap de Evolução Acadêmica (Notas 1, 2 e 3) -->
+      <section class="bg-white p-4 p-md-5 rounded-4 border shadow-sm mb-5" aria-labelledby="roadmap-title">
+        <h2 id="roadmap-title" class="h3 fw-bold text-dark mb-4 text-center">
+          Ciclo de Desenvolvimento da Disciplina
+        </h2>
+
+        <div class="row g-4 text-center">
+          
+          <div class="col-md-4">
+            <div class="p-4 bg-light rounded-4 border h-100 border-primary border-2">
+              <span class="badge bg-primary px-3 py-2 rounded-pill fw-bold mb-3">Etapa Atual: Nota 1</span>
+              <h3 class="h5 fw-bold text-dark mb-2">Estrutura & Identidade</h3>
+              <p class="small text-muted mb-0">
+                Planejamento da solução, arquitetura da informação, HTML5 semântico, CSS3 customizado, Bootstrap 5.3 responsivo e relatório técnico.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="p-4 bg-light rounded-4 border h-100">
+              <span class="badge bg-secondary px-3 py-2 rounded-pill fw-bold mb-3">Próxima: Nota 2</span>
+              <h3 class="h5 fw-bold text-dark mb-2">Interatividade & APIs</h3>
+              <p class="small text-muted mb-0">
+                Consumo de dados assíncronos (Fetch API / JSON Server), componentização modular, validação avançada de formulários e armazenamento local.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="p-4 bg-light rounded-4 border h-100">
+              <span class="badge bg-dark px-3 py-2 rounded-pill fw-bold mb-3">Final: Nota 3</span>
+              <h3 class="h5 fw-bold text-dark mb-2">Apresentação no Polo</h3>
+              <p class="small text-muted mb-0">
+                Projeto finalizado, testes de usabilidade, refinamento de acessibilidade e apresentação presencial para a banca avaliadora.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Equipe e Créditos -->
+      <section class="bg-white p-4 p-md-5 rounded-4 border shadow-sm text-center">
+        <h2 class="h4 fw-bold text-dark mb-2">Equipe de Desenvolvimento</h2>
+        <p class="text-muted small mb-4">Projeto desenvolvido para a disciplina de Desenvolvimento Web</p>
+        
+        <div class="row justify-content-center g-3">
+          <div class="col-sm-6 col-md-4">
+            <div class="p-3 bg-light rounded-3 border">
+              <i class="bi bi-person-badge text-primary fs-3 d-block mb-1" aria-hidden="true"></i>
+              <strong class="d-block text-dark">Welielton & Equipe</strong>
+              <small class="text-muted">Análise e Desenvolvimento de Sistemas</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Rodapé Semântico -->
+  <footer class="footer-main" aria-label="Rodapé do Site">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="d-flex align-items-center mb-3">
+            <span class="brand-icon"><i class="bi bi-heart-pulse-fill" aria-hidden="true"></i></span>
+            <span class="h5 fw-bold text-white mb-0">Conecta Voluntário</span>
+          </div>
+          <p class="small text-secondary mb-3">
+            Banco de Talentos para Causas Sociais. Conectando pessoas e suas habilidades a ONGs que transformam realidades.
+          </p>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h3 class="footer-title">Navegação</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="vagas.html">Mural de Vagas</a></li>
+            <li><a href="cadastro.html">Inscrição</a></li>
+            <li><a href="instituicao.html">Perfil da ONG</a></li>
+            <li><a href="sobre.html">Sobre & ODS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-3">
+          <h3 class="footer-title">ODS Integrados</h3>
+          <ul class="footer-links">
+            <li><a href="sobre.html#ods4"><span class="badge me-1" style="background-color: var(--ods-4);">4</span> Educação de Qualidade</a></li>
+            <li><a href="sobre.html#ods10"><span class="badge me-1" style="background-color: var(--ods-10);">10</span> Redução Desigualdades</a></li>
+            <li><a href="sobre.html#ods17"><span class="badge me-1" style="background-color: var(--ods-17);">17</span> Parcerias e Meios</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <h3 class="footer-title">Projeto Acadêmico</h3>
+          <p class="small text-secondary mb-0">
+            Desenvolvimento Web (Nota 1). Código estruturado e acessível.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center text-secondary">
+        <p class="mb-2 mb-md-0">&copy; 2026 Conecta Voluntário. Licença Educacional.</p>
+        <p class="mb-0 small">Em conformidade com WCAG AA.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5.3 Bundle JS via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <!-- Script Customizado -->
+  <script src="js/main.js"></script>
+</body>
+</html>
